@@ -1,0 +1,137 @@
+/* Import Outfit font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  color: hsl(215, 51%, 70%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  background-color: hsl(216, 50%, 16%);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card__image-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.card__image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card__overlay img {
+  width: 50px;
+}
+
+.card__image-container:hover .card__overlay {
+  opacity: 1;
+}
+
+.card__title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card__title:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.card__description {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card__price, .card__time {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card__price span {
+  color: hsl(178, 100%, 50%);
+  font-weight: 600;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: hsl(215, 32%, 27%);
+  margin-bottom: 1rem;
+}
+
+.card__creator {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card__avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card__creator-name {
+  color: white;
+}
+
+.card__creator-name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
